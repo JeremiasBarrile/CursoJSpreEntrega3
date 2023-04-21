@@ -1,5 +1,5 @@
 
-const carritoAbonos = [];
+
 
 const abonos = [
   { nombre: "Abono Platea Alta", codigo: 1974, importe: 45000 },
