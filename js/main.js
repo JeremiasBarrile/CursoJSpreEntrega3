@@ -9,7 +9,7 @@ function filtrarAbonos(value) {
   rta.length > 0 && cargarAbonos(rta)
 }
 
-filtradorDeAbonos.addEventListener ("search", (e)=> {filtrarAbonos(e.target.value)});
+filtradorDeAbonos.addEventListener ("keyup", (e)=> {filtrarAbonos(e.target.value)});
 
 function returnCardHTML(abono) {
   let {nombre,importe,codigo} =abono
@@ -23,7 +23,7 @@ function returnCardHTML(abono) {
 }
 
 function cantidadAbonosComprar() {
-  carritoAbonos.textContent = carritoAbonos.length;
+  totalCarrito.textContent = carritoAbonos.length;
 }
 
 cantidadAbonosComprar();
@@ -35,26 +35,26 @@ function cargarAbonos(abono) {
 }
 
 function clickButton() {
-  const botones = document.querySelectorAll("button.boton-card");
+  const botones = document.querySelectorAll(".boton-card");
   if (botones !== null) {
     for (const boton of botones) {
-      boton.addEventListener("click", (e) => {
-        let producto = abonos.find((abono) => abono.codigo === parseInt(e.target.id));
-        carritoAbonos.push(producto);
+      boton.addEventListener("click", () => {
+        let resp = abonos.find(abono => abono.codigo === parseInt(boton.id));
+        carritoAbonos.push(resp);
         cantidadAbonosComprar();
+        carritoLS();
       });
     }
   }
 }
-function cargarAbonos(abono) {
-  container.innerHTML = ""
-  abono.forEach(abono => { container.innerHTML += returnCardHTML(abono) })
-  clickButton()
+function carritoLS(){
+  localStorage.setItem("carAbon", JSON.stringify(carritoAbonos))
 }
-  
-  abonos.length > 0 ? cargarAbonos(abonos) : CardError()
-
+function volverCarro(){
+  return JSON.parse(localStorage.getItem("carAbon")) || []
+}
 
 cargarAbonos(abonos);
+volverCarro();
 
 
