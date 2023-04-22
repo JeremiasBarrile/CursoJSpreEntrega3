@@ -5,7 +5,7 @@
 /* Estilo para el encabezado */
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   height: 600px;
@@ -15,7 +15,6 @@ body {
 /*navbar*/
 .navbar {
   color: black;
-
 }
 
 .navbar-brand {
@@ -35,16 +34,16 @@ body {
 div.header {
   display: inline;
 }
-div.carrito{
+div.carrito {
   margin-left: 48%;
 }
-div.carrito span, div.carrito p {
+div.carrito span,
+div.carrito p {
   font-size: medium;
 }
 
 /* Estilo para la sección de bienvenida */
 .mi-bloque {
-
   background-color: #000;
   width: 50%;
   margin: auto;
@@ -64,7 +63,6 @@ div.carrito span, div.carrito p {
   background-color: black;
   color: white;
   text-shadow: 2px 2px 4px red;
-
 }
 
 .tituloAbonos {
@@ -75,11 +73,11 @@ div.carrito span, div.carrito p {
   color: white;
   text-shadow: 2px 2px 4px red;
 }
-input#filterAbonos:focus{
+input#filterAbonos:focus {
   border-color: red;
   color: white;
 }
-.barra-busqueda{
+.barra-busqueda {
   border: solid 2px black;
   margin: 20px;
 }
@@ -112,9 +110,8 @@ footer {
   padding: 2rem;
   margin-top: 4rem;
   font-size: 2rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 700;
-  
 }
 .card-abonos {
   display: flexbox;
@@ -130,7 +127,6 @@ footer {
   width: 200px;
   height: 250px;
   background-color: white;
-  
 }
 
 .card-abonos:hover {
@@ -139,21 +135,17 @@ footer {
   box-shadow: 5px 20px 60px rgba(213, 4, 4, 0.519);
 }
 
-.card-abonos div.nombre, 
-.card-abonos div.importe{
+.card-abonos div.nombre,
+.card-abonos div.importe {
   height: 100px;
   font-size: 20px;
-  
 }
-
 
 button {
   font-size: 16px;
   width: 100px;
   padding: 10px;
-  
 }
-
 
 button,
 button:not(:hover) {
